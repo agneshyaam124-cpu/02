@@ -27,10 +27,10 @@ function updateStudentListUI() {
   studentListEl.innerHTML = '';
   students.forEach((student, index) => {
     const tag = document.createElement('div');
-    tag.className = 'student-tag';
+    tag.className = 'md-chip';
     tag.innerHTML = `
       ${student}
-      <button onclick="removeStudent(${index})">&times;</button>
+      <button onclick="removeStudent(${index})"><span class="material-symbols-outlined">close</span></button>
     `;
     studentListEl.appendChild(tag);
   });
