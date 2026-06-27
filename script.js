@@ -251,3 +251,17 @@ styleSheet.textContent = `
   }
 `;
 document.head.appendChild(styleSheet);
+
+// Ethics Gate Logic
+const ethicsGate = document.getElementById('ethics-gate');
+const btnAcceptEthics = document.getElementById('btnAcceptEthics');
+
+if (ethicsGate && btnAcceptEthics) {
+  btnAcceptEthics.addEventListener('click', () => {
+    ethicsGate.classList.add('hidden');
+    // 게이트가 사라진 후 DOM에서 완전히 제거하려면 아래 코드를 사용할 수 있습니다.
+    setTimeout(() => {
+      ethicsGate.style.display = 'none';
+    }, 500); // CSS transition 시간과 동일하게 설정
+  });
+}
